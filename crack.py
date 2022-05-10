@@ -1,8 +1,8 @@
-import random, time
+import random, time, sys
 from statistics import mean
 
-trys_per_method = 10000
-
+#trys_per_method = 10000
+trys_per_method = sys.argv[1]
 
 # +1 method
 
