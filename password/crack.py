@@ -2,7 +2,7 @@ import random, time, sys
 from statistics import mean
 
 #trys_per_method = 10000
-trys_per_method = sys.argv[1]
+trys_per_method = int(sys.argv[1])
 
 # +1 method
 
@@ -19,9 +19,7 @@ for i in range(0, trys_per_method + 1):
     #print(attempts)
     
 end = time.time()
-print(round(mean(list), 2))
-print(end - start)
-
+print("+1 method took " + str(round(end - start, 3)) + "s and " + str(round(mean(list), 2)) + " attempts")
 
 
 
@@ -39,8 +37,8 @@ for i in range(0, trys_per_method + 1):
     #print(attempts)
     
 end = time.time()
-print(round(mean(list), 2))
-print(end - start)
+print("-1 method took " + str(round(end - start, 3)) + "s and " + str(round(mean(list), 2)) + " attempts")
+
 
 
 
@@ -59,5 +57,4 @@ for i in range(0, trys_per_method + 1):
     #print(attempts)
     
 end = time.time()
-print(round(mean(list), 2))
-print(end - start)
+print("even/odd method took " + str(round(end - start, 3)) + "s and " + str(round(mean(list), 2)) + " attempts")
